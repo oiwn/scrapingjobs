@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">= 0.12",
+    "npm": ">= 2.7"
+  },
+  "name": "scrapingjobs",
+  "version": "0.0.1",
+  "description": "Scraping Jobs Website",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV=production webpack --progress --profile --colors",
+    "watch": "webpack-dev-server --hot --inline --progress --colors --content-base build/",
+    "serve": "webpack-dev-server --hot --inline -colors --content-base build/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "istinspring",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^5.8.22",
+    "babel-loader": "^5.3.2",
+    "esprima-fb": "^15001.1001.0-dev-harmony-fb",
+    "html-webpack-plugin": "^1.6.1",
+    "jsx-loader": "^0.13.2",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "dependencies": {
+    "firebase": "^2.2.9",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3"
+  }
+}

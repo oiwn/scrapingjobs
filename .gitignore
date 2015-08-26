@@ -1,0 +1,9 @@
+docs/
+build/
+node_modules/
+.divshot-cache/
+ncp-debug.log
+npm-debug.log
+
+# env
+scrapingjobs.yaml

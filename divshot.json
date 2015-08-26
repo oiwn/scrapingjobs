@@ -1,0 +1,10 @@
+{
+  "name": "scrapingjobs",
+  "root": "build",
+  "clean_urls": true,
+  "prerender": true,
+  "routes": {
+    "**": "index.html"
+  },
+  "error_page": "error.html"
+}
