@@ -22,12 +22,18 @@
     "esprima-fb": "^15001.1001.0-dev-harmony-fb",
     "html-webpack-plugin": "^1.6.1",
     "jsx-loader": "^0.13.2",
+    "redux-devtools": "^2.1.0",
     "webpack": "^1.11.0",
     "webpack-dev-server": "^1.10.1"
   },
   "dependencies": {
     "firebase": "^2.2.9",
+    "material-ui": "^0.11.0",
     "react": "^0.13.3",
-    "react-router": "^0.13.3"
+    "react-redux": "^2.1.1",
+    "react-router": "^0.13.3",
+    "react-tap-event-plugin": "^0.1.7",
+    "redux": "^2.0.0",
+    "reflux": "^0.2.12"
   }
 }

@@ -8,8 +8,7 @@ class Developer extends React.Component {
   render() {
     return (
       <div className='developer'>
-        <h3>{this.props.username}</h3>
-        <img src={this.props.profileImageURL} />
+        <h3><img src={this.props.profileImageURL} /> {this.props.username}</h3>
       </div>
     );
   }
@@ -22,9 +21,10 @@ class DevelopersList extends React.Component {
 
   render() {
     var developerNodes = this.props.data.map(function(developer) {
+      let avatar = developer.profileImageURL + '&s=40';
       return (
         <Developer key={developer.userId} username={developer.username}
-                   profileImageURL={developer.profileImageURL} />
+                   profileImageURL={avatar} />
       );
     });
 
@@ -53,7 +53,8 @@ class Developers extends React.Component {
         let userData = user.val();
         userData.userId = userId;
         users.push(userData);
-        console.log('forEach', userData);
+
+        // console.log('forEach', userData);
       });
 
       _this.setState({

@@ -14,7 +14,7 @@ var getEntryModules = function() {
     modules.push('webpack/hot/dev-server');
   }
 
-  modules.push(path.resolve(__dirname, 'app/app.js'));
+  modules.push(path.resolve(__dirname, 'app/index.js'));
   return modules;
 };
 
@@ -24,6 +24,7 @@ var getPlugins = function() {
         inject: true,
         template: 'app/templates/index.html',
       }),
+      new webpack.optimize.CommonsChunkPlugin('common', 'common.js'),
   ];
 
   var productionPlugins = [
