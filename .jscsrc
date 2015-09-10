@@ -3,6 +3,7 @@
   "disallowSpacesInAnonymousFunctionExpression": null,
   "validateLineBreaks": "LF",
   "validateIndentation": 2,
+  "validateQuoteMarks": true,
   "excludeFiles": ["build/**", "node_modules/**"],
   "esprima": "esprima-fb",
   "esnext": true

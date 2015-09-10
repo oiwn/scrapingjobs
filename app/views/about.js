@@ -7,7 +7,6 @@ export default class About extends React.Component {
         <div>
           <h1>About</h1>
           <p>Few sentences about this website</p>
-          <hr/>
         </div>
       );
     }

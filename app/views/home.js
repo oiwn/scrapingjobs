@@ -2,10 +2,10 @@
 import React from 'react';
 import mui from 'material-ui';
 
-import Navigation from './../Navigation';
-import Developers from './../Developers';
+import Navigation from './../components/Navigation';
+import Developers from './../components/Developers';
 
-var ThemeManager = new mui.Styles.ThemeManager();
+let ThemeManager = new mui.Styles.ThemeManager();
 let Paper = mui.Paper;
 let Card = mui.Card;
 let Avatar = mui.Avatar;
@@ -26,12 +26,9 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log(this.props);
-
-    // <Developers />
     return (
-      <Paper zDepth={0}>
-        <Card initiallyExpanded={true}>
+      <div>
+        <Card initiallyExpanded={true} zDepth={null}>
           <CardHeader
             title='Title'
             subtitle='Subtitle'
@@ -45,8 +42,8 @@ class Home extends React.Component {
             Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
           </CardText>
           <CardActions expandable={true}>
-            <FlatButton label="Action1"/>
-            <FlatButton label="Action2"/>
+            <FlatButton label='Action1'/>
+            <FlatButton label='Action2'/>
           </CardActions>
           <CardText expandable={true}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -55,8 +52,7 @@ class Home extends React.Component {
             Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
           </CardText>
         </Card>
-        <hr/>
-      </Paper>
+      </div>
     );
   }
 }

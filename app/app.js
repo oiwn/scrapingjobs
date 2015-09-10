@@ -1,16 +1,22 @@
-/* jshint esnext: true */
 import React from 'react';
 import mui from 'material-ui';
-import { RouteHandler} from 'react-router';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { RouteHandler } from 'react-router';
 
-var ThemeManager = new mui.Styles.ThemeManager();
-let Paper = mui.Paper;
+let ThemeManager = new mui.Styles.ThemeManager();
 
-import Header from './components/Header';
+// import Header from './components/Header';
+import { AppTopToolbar } from './components';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
+import LeftNavigation from './components/LeftNavigation';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   getChildContext() {
     return {
       muiTheme: ThemeManager.getCurrentTheme(),
@@ -19,20 +25,31 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id='app-container'>
-        <Header />
-        <Sidebar />
-        <main id='content' style={{width:'70%'}}>
-          <RouteHandler />
-        </main>
+      <div id="app">
+        <AppTopToolbar />
+        <hr />
+        <div className="row">
+          <main className="col-lg-9 col-md-8">
+            <RouteHandler />
+          </main>
+          <aside className="col-lg-3 col-md-4">
+            <Sidebar />
+          </aside>
+        </div>
+        <LeftNavigation />
         <Footer />
       </div>
     );
   }
 }
+/* jshint ignore:stop */
 
 App.childContextTypes = {
   muiTheme: React.PropTypes.object,
 };
 
-export default App;
+function mapStateToProps(state) {
+  return { user: state.user };
+}
+
+export default connect(mapStateToProps)(App);

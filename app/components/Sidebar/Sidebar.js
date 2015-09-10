@@ -14,14 +14,8 @@ class Sidebar extends React.Component {
   }
 
   render() {
-    let containerStyle = {
-      float: 'right',
-      padding: '4px',
-      width: '20%',
-    };
-
     return (
-      <div style={containerStyle}>
+      <div>
         <h3>Sidebar</h3>
       </div>
     );

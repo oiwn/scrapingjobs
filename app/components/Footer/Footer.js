@@ -5,6 +5,10 @@ import mui from 'material-ui';
 
 var ThemeManager = new mui.Styles.ThemeManager();
 let Paper = mui.Paper;
+let Toolbar = mui.Toolbar;
+let ToolbarGroup = mui.ToolbarGroup;
+let FlatButton = mui.FlatButton;
+let ToolbarSeparator = mui.ToolbarSeparator;
 
 class Footer extends React.Component {
   getChildContext() {
@@ -16,10 +20,19 @@ class Footer extends React.Component {
   render() {
     return (
       <Paper zDepth={1}>
-        <ul>
-          <li><Link to='home'>Index</Link></li>
-          <li><Link to='about'>About</Link></li>
-        </ul>
+        <Toolbar>
+          <ToolbarGroup key={1} float='left'>
+            <FlatButton label='Home' containerElement={<Link to='home'/>} />
+            <FlatButton label='About' containerElement={<Link to='about'/>} primary={true} />
+            <FlatButton label='Add Job' containerElement={<Link to='add-job'/>} primary={true} />
+          </ToolbarGroup>
+          <ToolbarSeparator/>
+        </Toolbar>
+
+        <nav>
+          <Link to='home'>Index</Link>
+          <Link to='about'>About</Link>
+        </nav>
       </Paper>
     );
   }

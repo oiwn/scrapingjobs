@@ -1,6 +1,10 @@
+# Important
+
+- [ ] flux architecture using redux
+- [ ] add react hot loader
+
 # Some thoughts about.
 
-- [ ] implement flux using redux
 - [ ] setup webpack properly https://christianalfoni.github.io/react-webpack-cookbook/index.html
 - [ ] split webpack for dev/production
 - [x] setup divshot prerender
@@ -21,6 +25,11 @@
 - [ ] check reactfire https://github.com/firebase/reactfire
 - [ ] do i need re-base? https://github.com/tylermcginnis/re-base
 - [ ] add material-ui to es6
+
+# Examples
+
+https://github.com/erikras/react-redux-universal-hot-example - basically what i need to implement with
+reactjs and redux
 
 # Further reading
 

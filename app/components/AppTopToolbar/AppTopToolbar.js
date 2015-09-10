@@ -14,7 +14,7 @@ let ToolbarGroup = mui.ToolbarGroup;
 let IconMenu = mui.IconMenu;
 let IconButton = mui.IconButton;
 
-class Header extends React.Component {
+class AppTopToolbar extends React.Component {
   constructor(props) {
     super(props);
     this._handleClick = this._toggleLeftNavClick.bind(this);
@@ -34,10 +34,10 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <AppBar title='Web Scraping Jobs Board' zDepth={1}
+        <AppBar title="Web Scraping Jobs Board" zDepth={1}
                 onLeftIconButtonTouchTap={this._toggleLeftNavClick}>
-          <ToolbarGroup key={0} float='right'>
-            <RaisedButton label='Login' primary={true} />
+          <ToolbarGroup key={0} float="right">
+            <RaisedButton label="Login" primary={true} />
           </ToolbarGroup>
         </AppBar>
       </header>
@@ -45,8 +45,8 @@ class Header extends React.Component {
   }
 }
 
-Header.childContextTypes = {
+AppTopToolbar.childContextTypes = {
   muiTheme: React.PropTypes.object,
 };
 
-export default Header;
+export default AppTopToolbar;
