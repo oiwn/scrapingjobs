@@ -1,16 +1,11 @@
 import React from 'react';
 import mui from 'material-ui';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { RouteHandler } from 'react-router';
+import { TopToolbar, SideBar, Footer } from './../../components';
 
 let ThemeManager = new mui.Styles.ThemeManager();
-
-// import Header from './components/Header';
-import { AppTopToolbar } from './components';
-import Sidebar from './components/Sidebar';
-import Footer from './components/Footer';
-import LeftNavigation from './components/LeftNavigation';
 
 class App extends React.Component {
   constructor(props) {
@@ -26,17 +21,16 @@ class App extends React.Component {
   render() {
     return (
       <div id="app">
-        <AppTopToolbar />
-        <hr />
+        <TopToolbar />
+        <br />
         <div className="row">
           <main className="col-lg-9 col-md-8">
             <RouteHandler />
           </main>
           <aside className="col-lg-3 col-md-4">
-            <Sidebar />
+            <SideBar />
           </aside>
         </div>
-        <LeftNavigation />
         <Footer />
       </div>
     );

@@ -1,6 +1,5 @@
 /* jshint node: true */
-'use strict';
-
+/* jshint esnext: false */
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -14,17 +13,17 @@ var getEntryModules = function() {
     modules.push('webpack/hot/dev-server');
   }
 
-  modules.push(path.resolve(__dirname, 'app/index.js'));
+  modules.push(path.resolve(__dirname, 'app/client.js'));
   return modules;
 };
 
 var getPlugins = function() {
   var commonPlugins = [
-      new HtmlWebpackPlugin({
-        inject: true,
-        template: 'app/templates/index.html',
-      }),
-      new webpack.optimize.CommonsChunkPlugin('common', 'common.js'),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: 'app/templates/index.html',
+    }),
+    new webpack.optimize.CommonsChunkPlugin('common', 'common.js'),
   ];
 
   var productionPlugins = [
@@ -51,7 +50,6 @@ var getPlugins = function() {
         cascade: true,
         drop_console: true,
       },
-
       // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
       output: {
         comments: false,
@@ -86,16 +84,6 @@ var config = {
     ],
   },
   plugins: getPlugins(),
-
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     inject: true,
-  //     template: 'app/templates/index.html',
-  //   }),
-  //   new webpack.optimize.OccurenceOrderPlugin(),
-  //   new webpack.optimize.CommonsChunkPlugin('common', 'common.js'),
-  //   new webpack.NoErrorsPlugin(),
-  // ],
   devServer: {
     contentBase: './build',
     historyApiFallback: true,

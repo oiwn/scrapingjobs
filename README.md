@@ -3,6 +3,9 @@
 - [ ] flux architecture using redux
 - [ ] add react hot loader
 
++ https://github.com/gaearon/redux-thunk
+
+
 # Some thoughts about.
 
 - [ ] setup webpack properly https://christianalfoni.github.io/react-webpack-cookbook/index.html
@@ -24,12 +27,33 @@
 - [ ] awesome example https://github.com/echenley/react-news/
 - [ ] check reactfire https://github.com/firebase/reactfire
 - [ ] do i need re-base? https://github.com/tylermcginnis/re-base
-- [ ] add material-ui to es6
+- [x] add material-ui to es6
+- [ ] https://github.com/typicode/lowdb lowdb as a backend
+- [ ] https://www.npmjs.com/package/json-server - json server as an api
+- [ ] pick css module for react
+  - [ ] https://github.com/gajus/react-css-modules
+- [ ] use http://facebook.github.io/immutable-js/
 
 # Examples
 
 https://github.com/erikras/react-redux-universal-hot-example - basically what i need to implement with
 reactjs and redux
+
+https://github.com/GetExpert/redux-blog-example
+
+https://github.com/erikras/react-redux-universal-hot-example/issues/169
+
+http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html
+
+https://github.com/erikras/ducks-modular-redux
+
+https://github.com/steida/songary
+
+http://tutorialzine.com/2014/07/5-practical-examples-for-learning-facebooks-react-framework/
+
+https://www.reddit.com/r/reactjs/comments/3jcdfk/has_anyone_did_any_serious_large_real_web/
+
+https://underthehood.myob.com/changing-of-the-guard-in-web-technologies/
 
 # Further reading
 
@@ -45,3 +69,5 @@ reactjs and redux
 + http://www.infoq.com/articles/microservices-intro
 + https://www.nginx.com/blog/introduction-to-microservices/
 + https://github.com/mikemintz/rethinkdb-websocket-server
++ http://stackoverflow.com/questions/23931416/react-flux-state-and-stores?rq=1
++ http://stackoverflow.com/questions/28060493/react-flux-and-xhr-routing-caching?rq=1

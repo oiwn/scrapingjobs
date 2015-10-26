@@ -7,15 +7,16 @@
   "name": "scrapingjobs",
   "version": "0.0.1",
   "description": "Scraping Jobs Website",
-  "main": "index.js",
+  "main": "app/client.js",
   "scripts": {
+    "lint": "eslint -c .eslintrc app",
     "build": "NODE_ENV=production webpack --progress --profile --colors",
-    "watch": "webpack-dev-server --hot --inline --progress --colors --content-base build/",
-    "serve": "webpack-dev-server --hot --inline -colors --content-base build/",
+    "watch": "NODE_PATH=./app webpack-dev-server --hot --inline --progress --colors --content-base build/",
+    "serve": "NODE_PATH=./app webpack-dev-server --hot --inline -colors --content-base build/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "istinspring",
-  "license": "MIT",
+  "license": "GPL",
   "devDependencies": {
     "babel-core": "^5.8.22",
     "babel-eslint": "^4.1.1",
@@ -31,12 +32,11 @@
   },
   "dependencies": {
     "firebase": "^2.2.9",
-    "material-ui": "^0.11.0",
     "react": "^0.13.3",
-    "react-redux": "^2.1.1",
     "react-router": "^0.13.3",
+    "material-ui": "^0.11.0",
     "react-tap-event-plugin": "^0.1.7",
     "redux": "^2.0.0",
-    "reflux": "^0.2.12"
+    "react-redux": "^2.1.1"
   }
 }

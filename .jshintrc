@@ -1,6 +1,7 @@
 {
+  "elision": true,
   "esnext": true,
   "node": true,
   "devel": true,
-  "browser": true,
+  "browser": true
 }

@@ -3,7 +3,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import mui from 'material-ui';
 
-var ThemeManager = new mui.Styles.ThemeManager();
+let ThemeManager = new mui.Styles.ThemeManager();
+
 let Paper = mui.Paper;
 let Toolbar = mui.Toolbar;
 let ToolbarGroup = mui.ToolbarGroup;
@@ -19,20 +20,15 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <Paper zDepth={1}>
+      <Paper zDepth={null}>
         <Toolbar>
-          <ToolbarGroup key={1} float='left'>
-            <FlatButton label='Home' containerElement={<Link to='home'/>} />
-            <FlatButton label='About' containerElement={<Link to='about'/>} primary={true} />
-            <FlatButton label='Add Job' containerElement={<Link to='add-job'/>} primary={true} />
+          <ToolbarGroup key={1} float="left">
+            <FlatButton label="Home" containerElement={<Link to="home" />} />
+            <FlatButton label="About" containerElement={<Link to="about" />} primary={true} />
+            <FlatButton label="Add Job" containerElement={<Link to="job-add" />} primary={true} />
           </ToolbarGroup>
           <ToolbarSeparator/>
         </Toolbar>
-
-        <nav>
-          <Link to='home'>Index</Link>
-          <Link to='about'>About</Link>
-        </nav>
       </Paper>
     );
   }

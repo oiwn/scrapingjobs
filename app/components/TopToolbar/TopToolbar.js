@@ -3,8 +3,6 @@ import React from 'react';
 import mui from 'material-ui';
 import { Provider } from 'react-redux';
 
-import LeftNavigation from './../LeftNavigation';
-
 let ThemeManager = new mui.Styles.ThemeManager();
 let AppBar = mui.AppBar;
 let LeftNav = mui.LeftNav;
@@ -14,7 +12,7 @@ let ToolbarGroup = mui.ToolbarGroup;
 let IconMenu = mui.IconMenu;
 let IconButton = mui.IconButton;
 
-class AppTopToolbar extends React.Component {
+class TopToolbar extends React.Component {
   constructor(props) {
     super(props);
     this._handleClick = this._toggleLeftNavClick.bind(this);
@@ -28,7 +26,6 @@ class AppTopToolbar extends React.Component {
 
   _toggleLeftNavClick(e) {
     e.preventDefault();
-    this.refs.leftNavigation.toggle();
   }
 
   render() {
@@ -45,8 +42,8 @@ class AppTopToolbar extends React.Component {
   }
 }
 
-AppTopToolbar.childContextTypes = {
+TopToolbar.childContextTypes = {
   muiTheme: React.PropTypes.object,
 };
 
-export default AppTopToolbar;
+export default TopToolbar;

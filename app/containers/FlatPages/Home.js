@@ -2,9 +2,6 @@
 import React from 'react';
 import mui from 'material-ui';
 
-import Navigation from './../components/Navigation';
-import Developers from './../components/Developers';
-
 let ThemeManager = new mui.Styles.ThemeManager();
 let Paper = mui.Paper;
 let Card = mui.Card;
@@ -30,11 +27,11 @@ class Home extends React.Component {
       <div>
         <Card initiallyExpanded={true} zDepth={null}>
           <CardHeader
-            title='Title'
-            subtitle='Subtitle'
+            title="Title"
+            subtitle="Subtitle"
             avatar={<Avatar style={{color:'red'}}>A</Avatar>}
-            showExpandableButton={true}>
-          </CardHeader>
+            showExpandableButton={true}
+          />
           <CardText expandable={true}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
@@ -42,8 +39,8 @@ class Home extends React.Component {
             Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
           </CardText>
           <CardActions expandable={true}>
-            <FlatButton label='Action1'/>
-            <FlatButton label='Action2'/>
+            <FlatButton label="Action1" />
+            <FlatButton label="Action2" />
           </CardActions>
           <CardText expandable={true}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
