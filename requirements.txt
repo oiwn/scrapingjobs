@@ -1,0 +1,7 @@
+django
+honcho
+gunicorn
+psycopg2
+behave
+behave-django
+django-allauth
