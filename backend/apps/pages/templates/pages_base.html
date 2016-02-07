@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block navigation %}
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+    <a class="active item">Home</a>
+    <a class="item">Jobs</a>
+    <a class="item" href="{% url 'contacts' %}">Contacts</a>
+    <a class="item" href="{% url 'about' %}">About</a>
+    <div class="right menu">
+      <div class="item">
+        <a class="ui login-button button">Log in</a>
+      </div>
+      <div class="item">
+        <a class="ui primary button">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a class="active item">Home</a>
+  <a class="item">Jobs</a>
+  <a class="item">Contacts</a>
+  <a class="item">About</a>
+  <a class="item">Login</a>
+  <a class="item">Signup</a>
+</div>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'pages_base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+<div class="pusher">
+
+  <div class="ui inverted vertical masthead center aligned segment">
+
+    {% include 'partials/inverted_menu.html' %}
+
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+        Web Scraping Jobs Board
+      </h1>
+      <h2>hire a web scraping expert</h2>
+      <div class="ui huge primary button">
+        Get Started <i class="right arrow icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="eight wide column">
+          <h3 class="ui header">Trying to improve web scraping market</h3>
+          <p>
+            Marketplaces like upwork are terrible, very low bidding, dependence
+            from the 3rd party, customers who expecting to hire a rockstar
+            for 5$ per hour. Fuck them all.
+          </p>
+          <h3 class="ui header">We just trying to connect people together</h3>
+          <p>
+            Yes, there is no fees yet, it just a board where you could
+            hire specialist for your data scraping related project
+          </p>
+        </div>
+        <div class="six wide right floated column">
+          <img src="{% static 'img/grablabracoon.gif' %}"
+               class="ui large rounded image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui vertical stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+      <div class="center aligned row">
+        <div class="column">
+          <h3>"What a Company"</h3>
+          <p>That is what they all say about us</p>
+        </div>
+        <div class="column">
+          <h3>"I shouldn't have gone with their competitor."</h3>
+          <p>
+            <b>Nan</b> Chief Fun Officer Acme Toys
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui vertical stripe segment">
+    <div class="ui text container">
+      <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
+      <p>
+        Instead of focusing on content creation and hard work, we have learned
+        how to master the art of doing nothing by providing massive amounts of
+        whitespace and generic content that can seem massive, monolithic and
+        worth your attention.
+      </p>
+      <a class="ui large button">Read More</a>
+      <h4 class="ui horizontal header divider">
+        <a href="#">Case Studies</a>
+      </h4>
+      <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
+      <p>
+        Yes I know you probably disregarded the earlier boasts as non-sequitor
+        filler content, but its really true. It took years of gene splicing and
+        combinatory DNA research, but our bananas can really dance.
+      </p>
+      <a class="ui large button">I'm Still Quite Interested</a>
+    </div>
+  </div>
+
+  {% include 'auth_base.html' %}
+{% endblock %}

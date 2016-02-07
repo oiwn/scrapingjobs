@@ -1,0 +1,19 @@
+{% load socialaccount %}
+
+<div id="auth-modal" class="ui modal">
+  <div class="header">Header</div>
+  <div class="content">
+    <p>
+      <a href="{% provider_login_url 'github' %}">
+        <button class="ui github primary button">
+          <i class="github square icon"></i>
+          GitHub
+        </button>
+      </a>
+    </p>
+  </div>
+  <div class="actions">
+    <div class="ui approve button">Approve</div>
+    <div class="ui cancel button">Cancel</div>
+  </div>
+</div>
